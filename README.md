@@ -1,7 +1,7 @@
 # btnapi-library
 Arduino library for buttons.
 
-This library allow you easier  way to conect buttonss to alll Arduino IDE compatible board.
+This library allow you easier  way to conect buttonss to all Arduino IDE compatible board.
 
 # Functions
 All functions explained at all_functions.ino in examples folder.
