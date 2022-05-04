@@ -1,22 +1,25 @@
 #include "btnapi.h"
-
 /****************************init************************************/
-btnapi::btnapi(int pin, int pull = HIGH_PULL, int open = NORM_CLOSE) {
+btnapi::btnapi(int pin, int pull, int open) {
   _pin = (byte)pin;
   _pull = (byte)pull;
   _open = (byte)open;
-  pinMode(_pin, _pull);
+  if(_pull == HIGH_PULL){
+    pinMode(_pin, INPUT_PULLUP);
+  }else if(_pull == LOW_PULL){
+    pinMode(_pin, INPUT);
+  }
 }
 /****************************set************************************/
-void btnapi::debInt(int dint = 10) {
+void btnapi::debInt(int dint) {
   interval = (byte)dint;
 }
 
-void btnapi::clkInt(int cint = 300){
+void btnapi::clkInt(int cint){
   clkInterval = cint;
 }
 
-void btnapi::hInt(int hint = 300){
+void btnapi::hInt(int hint){
   hInterval = hint;
 }
 /****************************tick************************************/
