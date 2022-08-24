@@ -1,4 +1,4 @@
-// Btnapi - library for connecting buttons to Arduino compaytible boards
+// Example code for btnapi library
 // Copyright (C) 2022 WolodiaM
 
 // This program is free software: you can redistribute it and/or modify
